@@ -13,7 +13,9 @@ const FlashCard = (props) => {
   return (
     <div className="Card" onClick={onClick}>
       <Card>
-        <div className="tags">{card.tags.map((tag) => <Tag>{tag}</Tag>)}</div>
+        {card.tags ? (
+          <div className="tags">{card.tags.map((tag) => <Tag>{tag}</Tag>)}</div>
+        ) : null}
         {cardStatus === CARD_STATUS.QUESTION
           ? (<div>Q:<Markdown markup={card.question} /></div>)
           : (<div>A:<Markdown markup={card.answer} /></div>)}
