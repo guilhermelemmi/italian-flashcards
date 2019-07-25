@@ -1,10 +1,32 @@
 body {
-  background-image: url(italy.jpg) no-repeat 0 0;
+  background: url(italy.jpg) no-repeat 0 0;
   background-size: cover;
 }
 
 .App {
   text-align: center;
+
+  main {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+    .Game {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .Intro {
+    p {
+      color: #f0f0f0;
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  }
 
   .Problem {
     width: 70%;
